@@ -208,7 +208,8 @@ static NSString * const kTime = @"time";
 
 - (void)fetchWithSessionManagerSubclass:(GIICompletionBlock)block
 {
-	// cancel any pending jsonDateRESTClient request
+	// cancel any pending jsonDateRESTClient requests that may still be in the default
+	// global concurrent queue that GIIRESTClient uses.
 	[self.jsonDateRESTClient gii_cancelURLSessionTaskWithMethod:@"GET" path:@"/"];
 	
 	[self.jsonDateRESTClient GET:@"/" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
