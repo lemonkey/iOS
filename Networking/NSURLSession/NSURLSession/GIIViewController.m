@@ -36,6 +36,9 @@ typedef void (^CompletionBlock)(NSDictionary *, NSError *);
 	if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])
 	{
 		NSURLSessionConfiguration *urlSessionDefaultConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+		urlSessionDefaultConfiguration.timeoutIntervalForRequest = 10.0;
+		urlSessionDefaultConfiguration.HTTPAdditionalHeaders = @{@"Accept" : @"application/json"};
+
 		_urlSession = [NSURLSession sessionWithConfiguration:urlSessionDefaultConfiguration
 													delegate:nil
 											   delegateQueue:nil];
@@ -109,7 +112,7 @@ typedef void (^CompletionBlock)(NSDictionary *, NSError *);
 - (void)fetchDateTime:(CompletionBlock)completionBlock
 {
 	NSURL *url = [NSURL URLWithString:DateTimeURLString];
-	
+
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	
 	NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request
