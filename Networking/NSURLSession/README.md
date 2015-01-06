@@ -1,1 +1,1 @@
-Introduced with iOS 7.
+A simple project demonstrating NSURLSession (iOS 7).
