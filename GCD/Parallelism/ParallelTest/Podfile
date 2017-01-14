@@ -1,0 +1,24 @@
+source 'git@github.com:medhelpintl/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+use_frameworks!
+
+install! 'cocoapods',
+:deterministic_uuids => false
+
+ios_workspace_path = 'ParallelTest.xcworkspace'
+ios_project_path = 'ParallelTest.xcodeproj'
+ios_target = :'ParallelTest'
+
+workspace ios_workspace_path
+
+def import_pods
+	pod 'CocoaLumberjack', '2.3.0'
+	pod 'SVGKit-MH', '2.0.5'
+end
+
+target ios_target.to_sym do
+	import_pods
+end
+

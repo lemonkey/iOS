@@ -6,7 +6,6 @@
 //  Copyright © 2017 Ari Braginsky. All rights reserved.
 //
 
-#import "Foo.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -17,24 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    dispatch_queue_attr_t attr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_CONCURRENT, QOS_CLASS_DEFAULT, 0);
-    dispatch_queue_t customQueue = dispatch_queue_create("testQueue", attr);
-
-//    You can specify either a serial queue or a concurrent queue when calling dispatch_apply or dispatch_apply_f. Passing in a concurrent queue allows you to perform multiple loop iterations simultaneously and is the most common way to use these functions. Although using a serial queue is permissible and does the right thing for your code, using such a queue has no real performance advantages over leaving the loop in place.
-
-    dispatch_apply(10, customQueue, ^(size_t i) {
-
-        NSLog(@"Thread: %@, Iteration: %zu", [NSThread currentThread], i);
-    
-        Foo *foo = [Foo new];
-        
-        [foo checkString];
-    });
-    
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

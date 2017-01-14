@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
++ (void)loadRemoteSVG:(BOOL)threadSafe forURLString:(NSString *)url;
 
 @end
 

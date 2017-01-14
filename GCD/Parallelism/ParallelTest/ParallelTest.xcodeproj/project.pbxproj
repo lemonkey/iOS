@@ -14,9 +14,12 @@
 		9430931F1E249ACF0066A1FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9430931E1E249ACF0066A1FD /* Assets.xcassets */; };
 		943093221E249ACF0066A1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943093201E249ACF0066A1FD /* LaunchScreen.storyboard */; };
 		9430932B1E249DEF0066A1FD /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9430932A1E249DEF0066A1FD /* Foo.m */; };
+		AE382FF05730A163032F50B0 /* Pods_ParallelTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE24A63FFF6B420969F85E4 /* Pods_ParallelTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23D6225D065D7F2654FA4B84 /* Pods-ParallelTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallelTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParallelTest/Pods-ParallelTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3DAD5C36E21BFBA43BD82560 /* Pods-ParallelTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallelTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParallelTest/Pods-ParallelTest.release.xcconfig"; sourceTree = "<group>"; };
 		9430930F1E249ACF0066A1FD /* ParallelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943093131E249ACF0066A1FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		943093151E249ACF0066A1FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		943093231E249ACF0066A1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		943093291E249DEF0066A1FD /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		9430932A1E249DEF0066A1FD /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
+		EEE24A63FFF6B420969F85E4 /* Pods_ParallelTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParallelTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE382FF05730A163032F50B0 /* Pods_ParallelTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05075FC034D27F0FF94321B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23D6225D065D7F2654FA4B84 /* Pods-ParallelTest.debug.xcconfig */,
+				3DAD5C36E21BFBA43BD82560 /* Pods-ParallelTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CF9D015E579D80D80B0A302 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE24A63FFF6B420969F85E4 /* Pods_ParallelTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		943093061E249ACE0066A1FD = {
 			isa = PBXGroup;
 			children = (
 				943093111E249ACF0066A1FD /* ParallelTest */,
 				943093101E249ACF0066A1FD /* Products */,
+				05075FC034D27F0FF94321B1 /* Pods */,
+				4CF9D015E579D80D80B0A302 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 943093261E249ACF0066A1FD /* Build configuration list for PBXNativeTarget "ParallelTest" */;
 			buildPhases = (
+				2FD38A3EC7F22FEA056F744D /* [CP] Check Pods Manifest.lock */,
 				9430930B1E249ACE0066A1FD /* Sources */,
 				9430930C1E249ACE0066A1FD /* Frameworks */,
 				9430930D1E249ACE0066A1FD /* Resources */,
+				D84801326EF3F5EE372417EA /* [CP] Embed Pods Frameworks */,
+				C0412DEBECD02664A1DB5F00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +177,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FD38A3EC7F22FEA056F744D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0412DEBECD02664A1DB5F00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParallelTest/Pods-ParallelTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D84801326EF3F5EE372417EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParallelTest/Pods-ParallelTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9430930B1E249ACE0066A1FD /* Sources */ = {
@@ -277,6 +352,7 @@
 		};
 		943093271E249ACF0066A1FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23D6225D065D7F2654FA4B84 /* Pods-ParallelTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 82XMZD9V6E;
@@ -289,6 +365,7 @@
 		};
 		943093281E249ACF0066A1FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAD5C36E21BFBA43BD82560 /* Pods-ParallelTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 82XMZD9V6E;

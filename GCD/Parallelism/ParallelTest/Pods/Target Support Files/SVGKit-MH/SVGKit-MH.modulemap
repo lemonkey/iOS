@@ -1,0 +1,6 @@
+framework module SVGKit_MH {
+  umbrella header "SVGKit-MH-umbrella.h"
+
+  export *
+  module * { export * }
+}
